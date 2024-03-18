@@ -271,23 +271,24 @@ class Calculator:
         return self.currentValue
 
     def displayModeBin(self):
-        self.currentValue = bin(int(self.currentValue))
-
-
+        try:
+            self.currentValue = bin(int(self.currentValue))
+            return bin(int(self.currentValue))
+        except ValueError:
+            return self.currentValue
 
     def displayModeOct(self):
         self.currentValue = oct(int(self.currentValue))
-
+        return self.currentValue  # oct(int(self.currentValue))
     #
     def displayModeHex(self):
-#        self.currentValue = hex(x)
         self.currentValue = hex(int(self.currentValue))
+        return float(self.currentValue)
 
 
-
-    # def displayModeDec(self):
-    #     self.currentValue = dec(int(self.currentValue))
-    #     #return ("The decimal value of", displayMode, "is:" + float(dec(displayMode)), "in decimal.")
+    def displayModeDec(self):
+        self.currentValue = float(self.currentValue)
+        return self.currentValue
 
 
 

@@ -78,11 +78,11 @@ class TestStringMethods(unittest.TestCase):
     def test_inverse_of_a_number_negative_five(self):
         c = Calculator()
         c.set_value(-5)
-        self.assertEqual(c.inverse_of_number(c.currentValue), 5)
+        self.assertEqual(c.inverse_of_number2(c.currentValue), 5)
 
     def test_inverse_of_a_number_zero(self):
         c = Calculator()
-        self.assertEqual(c.inverse_of_number(0), 0)
+        self.assertEqual(c.inverse_of_number2(0), 0)
 
     def test_save_to_memory(self):
         c = Calculator()
